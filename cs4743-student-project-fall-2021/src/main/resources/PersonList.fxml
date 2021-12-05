@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane layoutY="66.0" prefHeight="334.0" prefWidth="600.0">
+         <center>
+            <VBox prefHeight="214.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ListView fx:id="personListView" onMouseClicked="#editPerson" prefHeight="553.0" prefWidth="600.0" style="-fx-background-color: grey;">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ListView>
+                  <HBox alignment="CENTER" fillHeight="false" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="searchInfo" text="Label" textFill="WHITE" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="55.0" prefWidth="600.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="first" mnemonicParsing="false" onAction="#firstPage" text="First" />
+                        <Button fx:id="last" mnemonicParsing="false" onAction="#lastPage" text="Last" />
+                        <Button fx:id="prev" mnemonicParsing="false" onAction="#prevPage" text="Prev" />
+                        <Button fx:id="next" mnemonicParsing="false" onAction="#nextPage" text="Next" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="45.0" prefWidth="600.0" style="-fx-background-color: grey;">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#addPerson" text="Add Person">
+                           <HBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#deletePerson" text="Delete Selected" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+      <TextField fx:id="searchField" layoutX="144.0" layoutY="14.0" prefHeight="25.0" prefWidth="440.0" />
+      <Text fill="WHITE" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Person Last Name">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Button layoutX="14.0" layoutY="39.0" mnemonicParsing="false" onAction="#search" text="Search" />
+   </children>
+</AnchorPane>
